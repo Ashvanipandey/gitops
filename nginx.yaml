@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: akash-pod
+  name: akash-pod2
   namespace: default
 spec:
   containers:

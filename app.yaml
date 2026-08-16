@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: "https://github.com/Ashvanipandey/gitops.git"
     targetRevision: main
-    path: . 
+    path: .
   syncPolicy:
     automated:
       prune: true
