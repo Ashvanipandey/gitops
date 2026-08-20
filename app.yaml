@@ -1,19 +1,21 @@
 
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-metadata: 
+metadata:
   name: saurav
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: app=ashvani007/axion-ui
+    argocd-image-updater.argoproj.io/app.update-strategy: newest-build
 spec:
   destination:
     server: https://kubernetes.default.svc
-  project: default 
+  project: default
   source:
-    repoURL: "https://github.com/Ashvanipandey/gitops.git"
+    repoURL: "https://github.com/Ashvanipandey/axion-ui.git"
     targetRevision: main
     path: .
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-  
